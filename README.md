@@ -1,4 +1,4 @@
 javascript-sudoku-solver
 ========================
 
-A sudoku solver written in javascript
+A simple sudoku solver written in javascript
