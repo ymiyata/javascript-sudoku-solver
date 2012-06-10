@@ -1,0 +1,215 @@
+<html>
+<head>
+    <link href="sudoku.css" rel="stylesheet" type="text/css"/>
+    <script src="lib/jquery-1.7.2.min.js" type="text/javascript"></script>
+    <script src="sudoku.js" language="javascript" type="text/javascript"></script>
+</head>
+
+<body>
+    <h1>Sudoku</h1>
+    <table class="board">
+        <tbody>
+            <tr>
+                <td>
+                    <table class="box box-1">
+                        <tbody>
+                            <tr>
+                                <td><input id='A1' type="text" size="1"></input></td>
+                                <td><input id='A2' type="text" size="1"></input></td>
+                                <td><input id='A3' type="text" size="1"></input></td>
+                            </tr>
+                            <tr>
+                                <td><input id='B1' type="text" size="1"></input></td>
+                                <td><input id='B2'type="text" size="1"></input></td>
+                                <td><input id='B3'type="text" size="1"></input></td>
+                            </tr>
+                            <tr>
+                                <td><input id='C1' type="text" size="1"></input></td>
+                                <td><input id='C2' type="text" size="1"></input></td>
+                                <td><input id='C3' type="text" size="1"></input></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    <table class="box box-2">
+                        <tbody>
+                            <tr>
+                                <td><input id='A4' type="text" size="1"></input></td>
+                                <td><input id='A5' type="text" size="1"></input></td>
+                                <td><input id='A6' type="text" size="1"></input></td>
+                            </tr>
+                            <tr>
+                                <td><input id='B4' type="text" size="1"></input></td>
+                                <td><input id='B5' type="text" size="1"></input></td>
+                                <td><input id='B6' type="text" size="1"></input></td>
+                            </tr>
+                            <tr>
+                                <td><input id='C4' type="text" size="1"></input></td>
+                                <td><input id='C5' type="text" size="1"></input></td>
+                                <td><input id='C6' type="text" size="1"></input></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    <table class="box box-3">
+                        <tbody>
+                            <tr>
+                                <td><input id='A7' type="text" size="1"></input></td>
+                                <td><input id='A8' type="text" size="1"></input></td>
+                                <td><input id='A9' type="text" size="1"></input></td>
+                            </tr>
+                            <tr>
+                                <td><input id='B7' type="text" size="1"></input></td>
+                                <td><input id='B8' type="text" size="1"></input></td>
+                                <td><input id='B9' type="text" size="1"></input></td>
+                            </tr>
+                            <tr>
+                                <td><input id='C7' type="text" size="1"></input></td>
+                                <td><input id='C8' type="text" size="1"></input></td>
+                                <td><input id='C9' type="text" size="1"></input></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="box box-4">
+                        <tbody>
+                            <tr>
+                                <td><input id='D1' type="text" size="1"></input></td>
+                                <td><input id='D2' type="text" size="1"></input></td>
+                                <td><input id='D3' type="text" size="1"></input></td>
+                            </tr>
+                            <tr>
+                                <td><input id='E1' type="text" size="1"></input></td>
+                                <td><input id='E2' type="text" size="1"></input></td>
+                                <td><input id='E3' type="text" size="1"></input></td>
+                            </tr>
+                            <tr>
+                                <td><input id='F1' type="text" size="1"></input></td>
+                                <td><input id='F2' type="text" size="1"></input></td>
+                                <td><input id='F3' type="text" size="1"></input></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    <table class="box box-5">
+                        <tbody>
+                            <tr>
+                                <td><input id='D4' type="text" size="1"></input></td>
+                                <td><input id='D5' type="text" size="1"></input></td>
+                                <td><input id='D6' type="text" size="1"></input></td>
+                            </tr>
+                            <tr>
+                                <td><input id='E4' type="text" size="1"></input></td>
+                                <td><input id='E5' type="text" size="1"></input></td>
+                                <td><input id='E6' type="text" size="1"></input></td>
+                            </tr>
+                            <tr>
+                                <td><input id='F4' type="text" size="1"></input></td>
+                                <td><input id='F5' type="text" size="1"></input></td>
+                                <td><input id='F6' type="text" size="1"></input></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    <table class="box box-6">
+                        <tbody>
+                            <tr>
+                                <td><input id='D7' type="text" size="1"></input></td>
+                                <td><input id='D8' type="text" size="1"></input></td>
+                                <td><input id='D9' type="text" size="1"></input></td>
+                            </tr>
+                            <tr>
+                                <td><input id='E7' type="text" size="1"></input></td>
+                                <td><input id='E8' type="text" size="1"></input></td>
+                                <td><input id='E9' type="text" size="1"></input></td>
+                            </tr>
+                            <tr>
+                                <td><input id='F7' type="text" size="1"></input></td>
+                                <td><input id='F8' type="text" size="1"></input></td>
+                                <td><input id='F9' type="text" size="1"></input></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="box box-7">
+                        <tbody>
+                            <tr>
+                                <td><input id='G1' type="text" size="1"></input></td>
+                                <td><input id='G2' type="text" size="1"></input></td>
+                                <td><input id='G3' type="text" size="1"></input></td>
+                            </tr>
+                            <tr>
+                                <td><input id='H1' type="text" size="1"></input></td>
+                                <td><input id='H2' type="text" size="1"></input></td>
+                                <td><input id='H3' type="text" size="1"></input></td>
+                            </tr>
+                            <tr>
+                                <td><input id='I1' type="text" size="1"></input></td>
+                                <td><input id='I2' type="text" size="1"></input></td>
+                                <td><input id='I3' type="text" size="1"></input></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    <table class="box box-8">
+                        <tbody>
+                            <tr>
+                                <td><input id='G4' type="text" size="1"></input></td>
+                                <td><input id='G5' type="text" size="1"></input></td>
+                                <td><input id='G6' type="text" size="1"></input></td>
+                            </tr>
+                            <tr>
+                                <td><input id='H4' type="text" size="1"></input></td>
+                                <td><input id='H5' type="text" size="1"></input></td>
+                                <td><input id='H6' type="text" size="1"></input></td>
+                            </tr>
+                            <tr>
+                                <td><input id='I4' type="text" size="1"></input></td>
+                                <td><input id='I5' type="text" size="1"></input></td>
+                                <td><input id='I6' type="text" size="1"></input></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    <table class="box box-9">
+                        <tbody>
+                            <tr>
+                                <td><input id='G7' type="text" size="1"></input></td>
+                                <td><input id='G8' type="text" size="1"></input></td>
+                                <td><input id='G9' type="text" size="1"></input></td>
+                            </tr>
+                            <tr>
+                                <td><input id='H7' type="text" size="1"></input></td>
+                                <td><input id='H8' type="text" size="1"></input></td>
+                                <td><input id='H9' type="text" size="1"></input></td>
+                            </tr>
+                            <tr>
+                                <td><input id='I7' type="text" size="1"></input></td>
+                                <td><input id='I8' type="text" size="1"></input></td>
+                                <td><input id='I9' type="text" size="1"></input></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <input type="button" id="solve" value="Solve"></input>
+        <input type="button" id="newGame" value="Clear Puzzle"></input>
+        <input type="button" id="sample" value="Load Sample"></input>
+    </div>
+</body>
+</html>
