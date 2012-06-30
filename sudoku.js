@@ -13,16 +13,8 @@ $(function() {
         } 
         return newObj;
     };
-    
-    // All the utility functions
-    var util = {
-        // Insert to body function used mainly for testing
-        insertToBody: function(htmlContent) {
-            $('<div/>').html(htmlContent).appendTo('body');
-        }
-    };
-    
-    var sudoku = function() {
+
+    var sudoku = (function() {
         var rows = 'ABCDEFGHI';
         var cols = '123456789';
         
@@ -40,7 +32,7 @@ $(function() {
         var tiles = cross(rows, cols);
         
         // List of all the possible units
-        var unitLists = function() {
+        var unitLists = (function() {
             var results = new Array();
             // Generates lists A1 ... A9, B1 ... B9, etc
             for(var c = 0; c < cols.length; c++) {
@@ -59,10 +51,10 @@ $(function() {
                 }
             }                    
             return results;
-        }();
+        })();
         
         // Map between a tile and the units that contain it
-        var units = function() {
+        var units = (function() {
             var map = {};
             function findUnitsWithTile(tile) {
                 var unitWithTile = new Array();
@@ -77,10 +69,10 @@ $(function() {
                 map[tile] = findUnitsWithTile(tile);
             });
             return map;
-        }();
+        })();
         
         // Map between a tile and its peers (peers are all the tiles in the units containing the key tile)
-        var peers = function() {
+        var peers = (function() {
             var map = {};
             function unionOfUnits(tile) {
                 var results = new Array();
@@ -100,7 +92,7 @@ $(function() {
                 map[tile] = unionOfUnits(tile);
             });
             return map;
-        }();
+        })();
         
         return {
             init: function() {
@@ -130,7 +122,7 @@ $(function() {
                     }
                 });
             },
-            solver: function() {
+            solver: (function() {
                 // function to initialize the board
                 function initialize() {
                     var map = {};
@@ -303,13 +295,13 @@ $(function() {
                     solve: solve,
                     print: print
                 }
-            }(),
+            })(),
             test: function() {
-                util.insertToBody('*********** unit lists ************');
+                console.log('*********** unit lists ************');
                 for (var i = 0; i < unitLists.length; i++) {
-                    util.insertToBody('[' + unitLists[i].toString() + ']');
+                    console.log('[' + unitLists[i].toString() + ']');
                 }
-                util.insertToBody('*********** units ************');
+                console.log('*********** units ************');
                 for (var tile in units) {
                     if ( !(units[tile] instanceof Function) ) {
                         var listString = '[';
@@ -317,18 +309,18 @@ $(function() {
                         for(var i = 0; i < unitsContainingTile.length; i++) {
                             listString += ' [' + unitsContainingTile[i].toString() + '] ';
                         }
-                        util.insertToBody(tile + ": " + listString + ' ]');
+                        console.log(tile + ": " + listString + ' ]');
                     }
                 }
-                util.insertToBody('*********** peers ************');
+                console.log('*********** peers ************');
                 for (var tile in peers) {
                     if ( !(peers[tile] instanceof Function) ) {    
-                        util.insertToBody(tile + ": " + peers[tile].toString());
+                        console.log(tile + ": " + peers[tile].toString());
                     }
                 }
             }
         }
-    }();
+    })();
     
     sudoku.init();
     //sudoku.test();
